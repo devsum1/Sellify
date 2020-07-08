@@ -1,6 +1,5 @@
 const faker = require('faker');
 const mysqlconn = require('../config/sqlconn');
-const { company } = require('faker');
 let randomuserdata = [];
 let detail ="";
 for(let i = 0;i<5;i++){

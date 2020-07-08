@@ -18,6 +18,10 @@ const dirPath = path.join(__dirname,'public');
 
 const viewsPath = path.join(__dirname,'views');
 
+const imgdownload = require('./data/imgdownlod');
+const randomPostsData = require('./data/postsdata');
+
+
 // extract fake user data from faker
 // const randomUserData = require('./data/userdata');
 // console.log(randomUserData);
@@ -34,8 +38,9 @@ mysqlconn.connect((err)=>{
     console.log('DB connected succesfully');
 });
 
-app.get('/',(req,res)=>{
-    res.send(randomUserData);
+app.get('/', async (req,res)=>{
+    
+   res.send(postdataArr);
    
 })
 
