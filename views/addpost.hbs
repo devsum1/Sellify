@@ -1,0 +1,77 @@
+<div class="container">
+
+
+    <div class="row page-detail">
+
+        <div class="container  w-75 mx-auto  ">
+            <div class="row pl-2">
+                
+                <nav aria-label="breadcrumb" >
+                    <h3 class = "my-2">Selected Category</h3>
+                    <ol class="breadcrumb bg-transparent p-0">
+                        <li class="breadcrumb-item"><a href="#">Category</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Subcategory</li>
+                        <li class="breadcrumb-item active" aria-current="page">Sub Subcategory</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <form action="http://localhost:5000/posts/add" class=" form mx-auto w-75" method="post"
+           enctype="multipart/form-data" >
+            
+            <div class="container post-detail border m-2 p-4 border-success">
+                <div class="row ">
+                    <label for="exampleFormControlInput1">Brand *</label>
+                    <input type="text" class="form-control " name="brand" id="" placeholder="Enter your brand">
+                </div>
+                <div class="row">
+                    <label for="exampleFormControlInput1">Title*</label>
+                    <input type="text" class="form-control" name="title" id="" placeholder="Enter your title">
+                </div>
+                <div class="row">
+                    <label for="exampleFormControlInput1">Description *</label>
+                    <input type="text" class="form-control" name="description" id=""
+                        placeholder="description of min 30 words">
+                </div>
+            </div>
+
+            <div class="post-price container border m-2 p-4 border-info">
+                <div class="row">
+                    <label for="exampleFormControlInput1">Price</label>
+                    <input type="text" class="form-control" name="price" id="" placeholder="Enter your price">
+                </div>
+
+            </div>
+
+            <div class="container post-images border p-4 m-2 border-secondary">
+                <div class="row ">
+                    <div class="col-6">
+                        <label for="exampleFormControlInput1">Upload upto 12 photos</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="file" multiple name="files">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container post-location m-2 p-4 border">
+                <div class="row ">
+                    <div class="col-6">
+                        <label for="exampleFormControlInput1">Autodetect your location</label>
+                    </div>
+                    <div class="col-6">
+                        <button>Autodetect location</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-warning ">Post Ad</button>
+        </form>
+    </div>
+
+</div>
