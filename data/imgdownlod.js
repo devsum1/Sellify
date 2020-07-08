@@ -13,7 +13,7 @@ const downloadimg = (linkarr)=>{
           await download.image(options)
             .then(({ filename }) => {
               
-              console.log('Saved to',filename);  
+            //   console.log('Saved to',filename);  
             })
             .catch((err) => console.error(err))
     })

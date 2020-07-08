@@ -19,8 +19,7 @@ const dirPath = path.join(__dirname,'public');
 const viewsPath = path.join(__dirname,'views');
 
 const imgdownload = require('./data/imgdownlod');
-const randomPostsData = require('./data/postsdata');
-
+const postsdata = require('./data/postsdata')();
 
 // extract fake user data from faker
 // const randomUserData = require('./data/userdata');
@@ -39,9 +38,7 @@ mysqlconn.connect((err)=>{
 });
 
 app.get('/', async (req,res)=>{
-    
-   res.send(postdataArr);
-   
+   res.render('addpost.hbs');
 })
 
 //setting views path and view engine
