@@ -18,21 +18,15 @@ const dirPath = path.join(__dirname,'public');
 
 const viewsPath = path.join(__dirname,'views');
 
+// extract fake user data from faker
+// const randomUserData = require('./data/userdata');
+// console.log(randomUserData);
+
+
 //setting body parser
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:true}));
 
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, '/uploads')
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.fieldname+Date.now())
-    }
-  })
-  
-const upload = multer({ storage: storage })
 
 mysqlconn.connect((err)=>{
     if(err)
@@ -41,7 +35,8 @@ mysqlconn.connect((err)=>{
 });
 
 app.get('/',(req,res)=>{
-    res.render('addpost');
+    res.send(randomUserData);
+   
 })
 
 //setting views path and view engine
